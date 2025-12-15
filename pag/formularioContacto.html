@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto - LiteraMentes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header/Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">📚 LiteraMentes</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#libros">Libros</a></li>
+                <li><a href="../index.html#eventos">Eventos</a></li>
+                <li><a href="../index.html#comunidad">Comunidad</a></li>
+                <li><a href="/pag/formularioPago.html">Carrito</a></li>
+                <li><a href="/pag/formularioContacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <section class="contacto-section">
+        <h1 class="contacto-titulo">¿Tienes alguna pregunta?</h1>
+        <p class="contacto-subtitulo">Nos encantaría escucharte. Completa el formulario o llámanos directamente.</p>
+
+        <div class="contacto-wrapper">
+            <!-- Columna Izquierda: Formulario -->
+            <div class="contacto-formulario-wrapper">
+                <form class="contacto-form" id="contactoForm">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Juan García López" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+34 912 345 678">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="membresía">Preguntas sobre membresía</option>
+                            <option value="eventos">Información sobre eventos</option>
+                            <option value="libros">Recomendaciones de libros</option>
+                            <option value="soporte">Soporte técnico</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos cómo podemos ayudarte..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-grupo-checkbox">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacidad" required>
+                            <span>Acepto la política de privacidad y términos de servicio</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                    <p class="form-nota">Los campos marcados con * son obligatorios</p>
+                </form>
+            </div>
+
+            <!-- Columna Derecha: Mapa e Información -->
+            <div class="contacto-info-wrapper">
+                <!-- Mapa -->
+                <div class="mapa-container">
+                    <iframe class="mapa-embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.0000000000005!2d-3.6965656!3d40.4168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418eb4c588b5c1%3A0xd8f71c7c0c0c0c0c!2sMadrid!5e0!3m2!1ses!2ses!4v1703000000000"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="info-contacto">
+                    <h2>Información de Contacto</h2>
+
+                    <div class="info-item">
+                        <div class="info-icono">📍</div>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Calle Literaria 123<br>28001 Madrid, España</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icono">📞</div>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p><a href="tel:+34912345678">+34 912 345 678</a><br>Lun-Vier: 10:00-18:00</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icono">📧</div>
+                        <div>
+                            <h3>Correo Electrónico</h3>
+                            <p><a href="mailto:info@literamentes.com">info@literamentes.com</a><br><a
+                                    href="mailto:soporte@literamentes.com">soporte@literamentes.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icono">⏰</div>
+                        <div>
+                            <h3>Horario</h3>
+                            <p>Lunes a Viernes: 10:00 - 18:00<br>Sábados: 12:00 - 16:00<br>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="redes-contacto">
+                        <h3>Síguenos</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-btn" title="Facebook">f</a>
+                            <a href="#" class="social-btn" title="Instagram">📸</a>
+                            <a href="#" class="social-btn" title="Twitter">𝕏</a>
+                            <a href="#" class="social-btn" title="TikTok">♪</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preguntas Frecuentes -->
+        <section class="faq-section">
+            <h2>Preguntas Frecuentes</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-pregunta">
+                        <h3>¿Cuál es el costo de la membresía?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-respuesta">
+                        <p>Ofrecemos diferentes planes: Membresía Básica por €9.99/mes, Premium por €19.99/mes y VIP por
+                            €29.99/mes. Todos incluyen acceso a eventos mensuales y discuentos en libros.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pregunta">
+                        <h3>¿Cómo puedo participar en los eventos?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-respuesta">
+                        <p>Como miembro, automáticamente recibirás invitaciones por correo. Solo necesitas confirmar tu
+                            asistencia en la plataforma. Los eventos son tanto presenciales como virtuales.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pregunta">
+                        <h3>¿Hay período de prueba gratuita?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-respuesta">
+                        <p>Sí, ofrecemos 30 días de prueba gratuita para la membresía Premium. No requiere tarjeta de
+                            crédito y puedes cancelar en cualquier momento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pregunta">
+                        <h3>¿Dónde venden los libros recomendados?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-respuesta">
+                        <p>Tenemos alianzas con las principales librerías online. En nuestro sitio encontrarás enlaces
+                            directos para comprar con descuento especial para miembros.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pregunta">
+                        <h3>¿Cómo contacto con un asesor?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-respuesta">
+                        <p>Puedes contactarnos a través de este formulario, por teléfono en horario de atención, o vía
+                            chat en vivo disponible en nuestro sitio web.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pregunta">
+                        <h3>¿Cómo cambio mi plan de membresía?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-respuesta">
+                        <p>Desde tu perfil, puedes actualizar tu plan en cualquier momento. El cambio se aplica
+                            inmediatamente y ajustaremos el cobro proporcionalmente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 LiteraMentes - Club de Lectura Juvenil | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Manejo del formulario
+        const contactoForm = document.getElementById('contactoForm');
+
+        contactoForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto. 📚');
+            contactoForm.reset();
+        });
+
+        // Acordeón de FAQ
+        const faqItems = document.querySelectorAll('.faq-pregunta');
+
+        faqItems.forEach(pregunta => {
+            pregunta.addEventListener('click', () => {
+                const item = pregunta.parentElement;
+                const respuesta = item.querySelector('.faq-respuesta');
+                const toggle = pregunta.querySelector('.faq-toggle');
+
+                // Cerrar otros items abiertos
+                document.querySelectorAll('.faq-item.activo').forEach(openItem => {
+                    if (openItem !== item) {
+                        openItem.classList.remove('activo');
+                        openItem.querySelector('.faq-toggle').textContent = '+';
+                    }
+                });
+
+                // Abrir/cerrar item actual
+                item.parentElement.classList.toggle('activo');
+                toggle.textContent = item.parentElement.classList.contains('activo') ? '−' : '+';
+            });
+        });
+    </script>
+</body>
+
+</html>

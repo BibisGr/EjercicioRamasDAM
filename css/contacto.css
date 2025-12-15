@@ -1,0 +1,429 @@
+/* ====================================
+   ESTILOS PARA PÁGINA DE CONTACTO
+   ==================================== */
+
+.contacto-section {
+    padding: 3rem 5%;
+    background-color: var(--light-bg);
+    min-height: 100vh;
+}
+
+.contacto-titulo {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contacto-subtitulo {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 3rem;
+}
+
+/* ====================================
+   WRAPPER PRINCIPAL
+   ==================================== */
+
+.contacto-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+}
+
+/* ====================================
+   FORMULARIO DE CONTACTO
+   ==================================== */
+
+.contacto-formulario-wrapper {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grupo label {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    padding: 0.9rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    color: var(--text-dark);
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+    color: #b0b0b0;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+    background-color: rgba(108, 99, 255, 0.02);
+}
+
+.form-grupo select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236C63FF' d='M0 3l6 6 6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ====================================
+   CHECKBOX
+   ==================================== */
+
+.form-grupo-checkbox {
+    margin: 1rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.8rem;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+/* ====================================
+   BOTÓN ENVIAR
+   ==================================== */
+
+.btn-enviar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.3);
+}
+
+.btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(108, 99, 255, 0.4);
+}
+
+.btn-enviar:active {
+    transform: translateY(-1px);
+}
+
+.form-nota {
+    color: #95a5a6;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
+/* ====================================
+   INFORMACIÓN Y MAPA
+   ==================================== */
+
+.contacto-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mapa-container {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 300px;
+}
+
+.mapa-embed {
+    border-radius: 8px;
+}
+
+/* ====================================
+   INFORMACIÓN DE CONTACTO
+   ==================================== */
+
+.info-contacto {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-contacto h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.info-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-icono {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(108, 99, 255, 0.1);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.info-item h3 {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.info-item p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.info-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.info-item a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* ====================================
+   REDES SOCIALES
+   ==================================== */
+
+.redes-contacto {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--accent-color);
+}
+
+.redes-contacto h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* ====================================
+   SECCIÓN FAQ
+   ==================================== */
+
+.faq-section {
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    padding-top: 3rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.faq-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.faq-item {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.faq-pregunta {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--light-bg), #e8eef7);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: var(--transition);
+}
+
+.faq-item.activo .faq-pregunta {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.faq-pregunta h3 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin: 0;
+    flex: 1;
+}
+
+.faq-item.activo .faq-pregunta h3 {
+    color: white;
+}
+
+.faq-toggle {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 300;
+    margin-left: 1rem;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.faq-item.activo .faq-toggle {
+    color: white;
+}
+
+.faq-respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.activo .faq-respuesta {
+    max-height: 200px;
+}
+
+.faq-respuesta p {
+    padding: 1.5rem;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ====================================
+   RESPONSIVE
+   ==================================== */
+
+@media (max-width: 768px) {
+    .contacto-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contacto-titulo {
+        font-size: 2rem;
+    }
+
+    .contacto-subtitulo {
+        font-size: 1rem;
+    }
+}
