@@ -538,6 +538,151 @@ header {
     box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
 }
 
+
+/* ====================================
+   SECCIÓN DE GALERÍA CON CARRUSEL
+   ==================================== */
+
+.galeria {
+    padding: 5rem 5%;
+    background-color: white;
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.galeria h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+}
+
+.carrusel-wrapper {
+    flex: 1;
+    max-width: 700px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--light-bg), #e8eef7);
+    border-radius: var(--border-radius);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-imagen {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.slide h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.slide p {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.carrusel-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+.carrusel-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+}
+
+.carrusel-btn:active {
+    transform: scale(0.95);
+}
+
+.carrusel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.indicador:hover {
+    background-color: #bbb;
+    transform: scale(1.2);
+}
+
+.indicador.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+}
+
 /* ====================================
    FOOTER
    ==================================== */

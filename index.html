@@ -115,6 +115,54 @@
         </div>
     </section>
 
+    <!-- Galería de Fotos -->
+    <section id="galeria" class="galeria">
+        <h2>Momentos del Club</h2>
+        <div class="carrusel-container">
+            <button class="carrusel-btn carrusel-prev" onclick="cambiarSlide(-1)">❮</button>
+
+            <div class="carrusel-wrapper">
+                <div class="carrusel">
+                    <div class="slide active">
+                        <div class="slide-imagen">📚</div>
+                        <h3>Primera Tertulia</h3>
+                        <p>Nuestro primer encuentro fue una experiencia inolvidable compartiendo lecturas favoritas.</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-imagen">🎉</div>
+                        <h3>Celebración de Aniversario</h3>
+                        <p>Un año lleno de emociones y nuevas amistades en el mundo de la literatura.</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-imagen">🏆</div>
+                        <h3>Concurso Literario</h3>
+                        <p>Nuestros miembros brillaron presentando sus propias historias originales.</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-imagen">🎭</div>
+                        <h3>Dramatización de Clásicos</h3>
+                        <p>Llevamos al escenario grandes obras de la literatura universal.</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-imagen">💫</div>
+                        <h3>Encuentro con Autores</h3>
+                        <p>Una tarde inolvidable con escritores que inspiraron nuestras lecturas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carrusel-btn carrusel-next" onclick="cambiarSlide(1)">❯</button>
+        </div>
+
+        <div class="carrusel-indicadores">
+            <span class="indicador active" onclick="irAlSlide(0)"></span>
+            <span class="indicador" onclick="irAlSlide(1)"></span>
+            <span class="indicador" onclick="irAlSlide(2)"></span>
+            <span class="indicador" onclick="irAlSlide(3)"></span>
+            <span class="indicador" onclick="irAlSlide(4)"></span>
+        </div>
+    </section>
+
     <!-- Contacto -->
     <section id="contacto" class="contacto">
         <h2>Ponte en Contacto</h2>
@@ -144,6 +192,36 @@
     <footer>
         <p>&copy; 2025 LiteraMentes - Club de Lectura Juvenil | Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        let indiceSlideActual = 0;
+
+        function cambiarSlide(n) {
+            mostrarSlide(indiceSlideActual += n);
+        }
+
+        function irAlSlide(n) {
+            mostrarSlide(indiceSlideActual = n);
+        }
+
+        function mostrarSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const indicadores = document.querySelectorAll('.indicador');
+
+            if (n >= slides.length) {
+                indiceSlideActual = 0;
+            }
+            if (n < 0) {
+                indiceSlideActual = slides.length - 1;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicadores.forEach(ind => ind.classList.remove('active'));
+
+            slides[indiceSlideActual].classList.add('active');
+            indicadores[indiceSlideActual].classList.add('active');
+        }
+    </script>
 </body>
 
 </html>
