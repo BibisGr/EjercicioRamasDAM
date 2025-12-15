@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - LiteraMentes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pago.css">
+</head>
+
+<body>
+    <!-- Header/Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">📚 LiteraMentes</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#libros">Libros</a></li>
+                <li><a href="../index.html#eventos">Eventos</a></li>
+                <li><a href="../index.html#comunidad">Comunidad</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Pago -->
+    <section class="pago-section">
+        <div class="pago-container">
+            <!-- Lado Izquierdo: Resumen del Pedido -->
+            <div class="pago-resumen">
+                <h2>Resumen de tu Compra</h2>
+
+                <div class="resumen-items">
+                    <div class="resumen-item">
+                        <div class="item-info">
+                            <h3>Membresía Anual Premium</h3>
+                            <p class="item-desc">Acceso ilimitado a eventos y contenido exclusivo</p>
+                        </div>
+                        <span class="item-precio">€49.99</span>
+                    </div>
+
+                    <div class="resumen-item">
+                        <div class="item-info">
+                            <h3>Pack 5 Libros Digitales</h3>
+                            <p class="item-desc">Selección especial del mes de diciembre</p>
+                        </div>
+                        <span class="item-precio">€24.99</span>
+                    </div>
+
+                    <div class="resumen-item">
+                        <div class="item-info">
+                            <h3>Envío de Merchandise</h3>
+                            <p class="item-desc">Camiseta y taza personalizadas</p>
+                        </div>
+                        <span class="item-precio">€15.00</span>
+                    </div>
+                </div>
+
+                <div class="resumen-detalles">
+                    <div class="detalle-fila">
+                        <span>Subtotal:</span>
+                        <span>€89.98</span>
+                    </div>
+                    <div class="detalle-fila">
+                        <span>IVA (21%):</span>
+                        <span>€18.90</span>
+                    </div>
+                    <div class="detalle-fila descuento">
+                        <span>Código Promocional:</span>
+                        <span>-€10.00</span>
+                    </div>
+                </div>
+
+                <div class="resumen-total">
+                    <span>Total a Pagar:</span>
+                    <span class="total-cantidad">€98.88</span>
+                </div>
+            </div>
+
+            <!-- Lado Derecho: Formulario de Pago -->
+            <div class="pago-formulario">
+                <h2>Información de Pago</h2>
+
+                <form class="form-pago">
+                    <!-- Datos Personales -->
+                    <div class="form-seccion">
+                        <h3>Datos Personales</h3>
+                        <div class="form-grupo">
+                            <input type="text" placeholder="Nombre Completo" required>
+                        </div>
+                        <div class="form-grupo">
+                            <input type="email" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="form-grupo">
+                            <input type="tel" placeholder="Teléfono" required>
+                        </div>
+                    </div>
+
+                    <!-- Dirección -->
+                    <div class="form-seccion">
+                        <h3>Dirección de Envío</h3>
+                        <div class="form-grupo">
+                            <input type="text" placeholder="Calle y Número" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-grupo">
+                                <input type="text" placeholder="Ciudad" required>
+                            </div>
+                            <div class="form-grupo">
+                                <input type="text" placeholder="Código Postal" required>
+                            </div>
+                        </div>
+                        <div class="form-grupo">
+                            <input type="text" placeholder="País" required>
+                        </div>
+                    </div>
+
+                    <!-- Método de Pago -->
+                    <div class="form-seccion">
+                        <h3>Método de Pago</h3>
+                        <div class="metodos-pago">
+                            <label class="metodo-opcion">
+                                <input type="radio" name="metodo" value="tarjeta" checked>
+                                <span class="metodo-icono">💳</span>
+                                <span class="metodo-texto">Tarjeta de Crédito</span>
+                            </label>
+                            <label class="metodo-opcion">
+                                <input type="radio" name="metodo" value="paypal">
+                                <span class="metodo-icono">🅿️</span>
+                                <span class="metodo-texto">PayPal</span>
+                            </label>
+                            <label class="metodo-opcion">
+                                <input type="radio" name="metodo" value="transferencia">
+                                <span class="metodo-icono">🏦</span>
+                                <span class="metodo-texto">Transferencia Bancaria</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Detalles Tarjeta -->
+                    <div class="form-seccion" id="seccionTarjeta">
+                        <h3>Detalles de la Tarjeta</h3>
+                        <div class="form-grupo">
+                            <div class="tarjeta-preview">
+                                <div class="tarjeta-chip">💳</div>
+                                <div class="tarjeta-numero">**** **** **** ****</div>
+                                <div class="tarjeta-datos">
+                                    <span id="nombreTarjeta">NOMBRE APELLIDO</span>
+                                    <span id="fechaTarjeta">MM/YY</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-grupo">
+                            <input type="text" placeholder="Número de Tarjeta" maxlength="19" id="inputNumeroTarjeta"
+                                required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-grupo">
+                                <input type="text" placeholder="MM/YY" maxlength="5" id="inputFechaTarjeta" required>
+                            </div>
+                            <div class="form-grupo">
+                                <input type="text" placeholder="CVC" maxlength="3" id="inputCVC" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Código Promocional -->
+                    <div class="form-seccion">
+                        <h3>Código Promocional (Opcional)</h3>
+                        <div class="form-grupo-promo">
+                            <input type="text" placeholder="Ingresa tu código aquí">
+                            <button type="button" class="btn-aplicar">Aplicar</button>
+                        </div>
+                    </div>
+
+                    <!-- Términos -->
+                    <div class="form-terminos">
+                        <label>
+                            <input type="checkbox" required>
+                            <span>Acepto los términos y condiciones de compra</span>
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            <span>Deseo recibir ofertas y promociones por correo</span>
+                        </label>
+                    </div>
+
+                    <!-- Botones -->
+                    <button type="submit" class="btn-pagar">Confirmar Pago - €98.88</button>
+                    <a href="../index.html" class="btn-cancelar">Cancelar</a>
+                </form>
+
+                <!-- Medios de Pago Seguros -->
+                <div class="medios-seguros">
+                    <p>🔒 Pago 100% seguro</p>
+                    <div class="logos-pago">
+                        <span>VISA</span>
+                        <span>Mastercard</span>
+                        <span>PayPal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 LiteraMentes - Club de Lectura Juvenil | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Actualizar vista previa de tarjeta
+        const inputNumeroTarjeta = document.getElementById('inputNumeroTarjeta');
+        const inputFechaTarjeta = document.getElementById('inputFechaTarjeta');
+        const nombreTarjeta = document.getElementById('nombreTarjeta');
+        const fechaTarjeta = document.getElementById('fechaTarjeta');
+
+        inputNumeroTarjeta.addEventListener('input', (e) => {
+            let valor = e.target.value.replace(/\s/g, '');
+            valor = valor.replace(/(\d{4})/g, '$1 ').trim();
+            e.target.value = valor;
+        });
+
+        inputFechaTarjeta.addEventListener('input', (e) => {
+            let valor = e.target.value.replace(/\D/g, '');
+            if (valor.length >= 2) {
+                valor = valor.substring(0, 2) + '/' + valor.substring(2, 4);
+            }
+            e.target.value = valor;
+            fechaTarjeta.textContent = valor || 'MM/YY';
+        });
+
+        // Mostrar/Ocultar sección de tarjeta según método de pago
+        const metodoPago = document.querySelectorAll('input[name="metodo"]');
+        const seccionTarjeta = document.getElementById('seccionTarjeta');
+
+        metodoPago.forEach(metodo => {
+            metodo.addEventListener('change', (e) => {
+                if (e.target.value === 'tarjeta') {
+                    seccionTarjeta.style.display = 'block';
+                } else {
+                    seccionTarjeta.style.display = 'none';
+                }
+            });
+        });
+
+        // Envío de formulario
+        document.querySelector('.form-pago').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Pago procesado correctamente! Gracias por tu compra en LiteraMentes 📚');
+        });
+    </script>
+</body>
+
+</html>
