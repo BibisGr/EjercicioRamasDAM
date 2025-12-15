@@ -545,14 +545,14 @@ header {
 
 .galeria {
     padding: 5rem 5%;
-    background-color: white;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
 }
 
 .galeria h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     position: relative;
     padding-bottom: 1rem;
 }
@@ -593,10 +593,11 @@ header {
 .slide {
     display: none;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, var(--light-bg), #e8eef7);
+    background: linear-gradient(135deg, #0f3460, #16213e);
     border-radius: var(--border-radius);
     text-align: center;
     animation: fadeIn 0.5s ease;
+    border: 1px solid rgba(108, 99, 255, 0.3);
 }
 
 .slide.active {
@@ -621,23 +622,23 @@ header {
     transition: var(--transition);
     padding: 1rem;
     border-radius: 12px;
-    background-color: rgba(108, 99, 255, 0.1);
+    background-color: rgba(255, 107, 157, 0.15);
 }
 
 .slide-imagen:hover {
     transform: scale(1.1) rotate(5deg);
-    background-color: rgba(108, 99, 255, 0.2);
-    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.3);
+    background-color: rgba(255, 107, 157, 0.25);
+    box-shadow: 0 5px 20px rgba(255, 107, 157, 0.4);
 }
 
 .slide h3 {
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .slide p {
-    color: var(--text-dark);
+    color: #c0c0c0;
     font-size: 1.05rem;
     line-height: 1.6;
 }
@@ -677,14 +678,14 @@ header {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #ddd;
+    background-color: #444;
     cursor: pointer;
     transition: var(--transition);
     border: 2px solid transparent;
 }
 
 .indicador:hover {
-    background-color: #bbb;
+    background-color: #666;
     transform: scale(1.2);
 }
 
