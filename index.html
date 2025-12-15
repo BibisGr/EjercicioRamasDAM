@@ -124,27 +124,27 @@
             <div class="carrusel-wrapper">
                 <div class="carrusel">
                     <div class="slide active">
-                        <div class="slide-imagen">📚</div>
+                        <div class="slide-imagen" onclick="abrirModal('📚', 'Primera Tertulia')">📚</div>
                         <h3>Primera Tertulia</h3>
                         <p>Nuestro primer encuentro fue una experiencia inolvidable compartiendo lecturas favoritas.</p>
                     </div>
                     <div class="slide">
-                        <div class="slide-imagen">🎉</div>
+                        <div class="slide-imagen" onclick="abrirModal('🎉', 'Celebración de Aniversario')">🎉</div>
                         <h3>Celebración de Aniversario</h3>
                         <p>Un año lleno de emociones y nuevas amistades en el mundo de la literatura.</p>
                     </div>
                     <div class="slide">
-                        <div class="slide-imagen">🏆</div>
+                        <div class="slide-imagen" onclick="abrirModal('🏆', 'Concurso Literario')">🏆</div>
                         <h3>Concurso Literario</h3>
                         <p>Nuestros miembros brillaron presentando sus propias historias originales.</p>
                     </div>
                     <div class="slide">
-                        <div class="slide-imagen">🎭</div>
+                        <div class="slide-imagen" onclick="abrirModal('🎭', 'Dramatización de Clásicos')">🎭</div>
                         <h3>Dramatización de Clásicos</h3>
                         <p>Llevamos al escenario grandes obras de la literatura universal.</p>
                     </div>
                     <div class="slide">
-                        <div class="slide-imagen">💫</div>
+                        <div class="slide-imagen" onclick="abrirModal('💫', 'Encuentro con Autores')">💫</div>
                         <h3>Encuentro con Autores</h3>
                         <p>Una tarde inolvidable con escritores que inspiraron nuestras lecturas.</p>
                     </div>
@@ -162,6 +162,15 @@
             <span class="indicador" onclick="irAlSlide(4)"></span>
         </div>
     </section>
+
+    <!-- Modal para Galería -->
+    <div id="modalGaleria" class="modal" onclick="cerrarModal(event)">
+        <div class="modal-contenido" onclick="event.stopPropagation()">
+            <span class="modal-cerrar" onclick="cerrarModal()">&times;</span>
+            <div class="modal-imagen-grande" id="modalImagenGrande">📚</div>
+            <h2 id="modalTitulo">Primera Tertulia</h2>
+        </div>
+    </div>
 
     <!-- Contacto -->
     <section id="contacto" class="contacto">
@@ -221,6 +230,23 @@
             slides[indiceSlideActual].classList.add('active');
             indicadores[indiceSlideActual].classList.add('active');
         }
+
+        function abrirModal(imagen, titulo) {
+            document.getElementById('modalImagenGrande').textContent = imagen;
+            document.getElementById('modalTitulo').textContent = titulo;
+            document.getElementById('modalGaleria').classList.add('activo');
+        }
+
+        function cerrarModal(event) {
+            if (event && event.target.id !== 'modalGaleria') return;
+            document.getElementById('modalGaleria').classList.remove('activo');
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                cerrarModal();
+            }
+        });
     </script>
 </body>
 
